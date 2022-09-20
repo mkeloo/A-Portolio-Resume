@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import NameGIF from '../assets/NameGIF.gif';
+import NameGIF from '../assets/scrap.gif';
 
 const Navbar = () => {
   const links = [
@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={NameGIF} alt="Logo" style={{ width: '80px' }} />
+        <img src={NameGIF} alt="Logo" style={{ width: '100px' }} />
       </div>
 
       {/* Menu */}
