@@ -77,7 +77,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-[75%] z-100 shadow-pink-500 shadow-xl h-screen bg-[#0a192f] flex flex-col justify-center duration-500 ease-in-out items-center z-100'
         }
       >
         {links.map((link) => {
@@ -103,7 +103,7 @@ const Navbar = () => {
             return (
               <li
                 key={id}
-                className="w-[160px] md:w-[130px] md:h-[50px] md:ml-[-80px] h-[60px] flex justify-between items-center ml-[-102px] hover:ml-[-10px] duration-500 rounded-md bg-pink-600"
+                className="w-[160px] h-[60px] flex justify-between items-center ml-[-102px] hover:ml-[-10px] duration-500 rounded-md bg-pink-600"
               >
                 <a
                   className="flex justify-between  items-center w-full font-mono hover:font-bold text-gray-200"
