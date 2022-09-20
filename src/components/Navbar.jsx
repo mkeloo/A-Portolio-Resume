@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import logo from '../assets/logo.png';
 import NameGIF from '../assets/NameGIF.gif';
 
 const Navbar = () => {
