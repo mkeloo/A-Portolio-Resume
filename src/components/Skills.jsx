@@ -82,10 +82,10 @@ const Skills = () => {
           {skills.map(({ id, name, img }) => (
             <div
               key={id}
-              className="shadow-md shadow-[#ff64ff] hover:scale-110 duration-500 rounded-2xl group hover:shadow-cyan-500 hover:shadow-xl"
+              className="shadow-md shadow-[#ff64ff] hover:scale-110 duration-500 rounded-2xl group hover:shadow-cyan-500 hover:shadow-xl "
             >
               <img
-                className="w-20 mx-auto group-hover:skew-x-3 duration-500 group-hover:rotate-6 group-hover:skew-y-6 group-hover:scale-110"
+                className="w-20 mx-auto group-hover:skew-x-3 duration-500 group-hover:rotate-6 group-hover:skew-y-6 group-hover:scale-110 "
                 src={img}
                 alt={name}
               />
