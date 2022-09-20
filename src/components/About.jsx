@@ -5,6 +5,7 @@ const About = () => {
     <div>
       <div>
         <h2>About</h2>
+        {/* 40:48 */}
       </div>
     </div>
   );
