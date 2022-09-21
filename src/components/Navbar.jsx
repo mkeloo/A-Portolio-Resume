@@ -35,7 +35,7 @@ const Navbar = () => {
     {
       id: 4,
       url: 'https://www.instagram.com',
-      icon: <BsFillPersonLinesFill size={30} />,
+      icon: <BsFillPersonLinesFill size={30} Download />,
       text: 'Resume',
     },
   ];
@@ -45,9 +45,14 @@ const Navbar = () => {
   const toggleNav = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={NameGIF} alt="Logo" style={{ width: '100px' }} />
+        <img
+          src={NameGIF}
+          alt="Logo"
+          style={{ width: '90px' }}
+          className="ml-3 mt-2"
+        />
       </div>
 
       {/* Menu */}
