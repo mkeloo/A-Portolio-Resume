@@ -6,15 +6,10 @@ import { useRef } from 'react';
 const Contact = () => {
   const [smile, setSmile] = useState(false);
 
-  // change smile state
-  const changeSmile = () => {
-    setSmile(!smile);
-  };
-
   // email js functionality
   const form = useRef();
-  const [done, setDone] = React.useState(false);
-  const [value, setValue] = React.useState();
+  const [done, setDone] = useState(false);
+  const [value, setValue] = useState();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -55,50 +50,60 @@ const Contact = () => {
             Contact
           </p>
           <p className="text-gray-300 py-4">
-            Submit the form below or shoot me an email - myemail@gmail.com
+            Submit the form below or shoot me an email - mokshkeloo@gmail.com
           </p>
         </div>
         <input
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="text"
           name="user_name"
-          placeholder="Name"
           value={value}
+          placeholder="Name"
         />
         <input
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="email"
           name="user_email"
-          placeholder="Email"
           value={value}
+          placeholder="Email"
         />
         <textarea
           className="bg-[#ccd6f6] border-2 rounded-lg p-3 flex border-gray-300 mb-4"
           name="message"
           rows="10"
-          placeholder="Message"
           value={value}
+          placeholder="Message"
         ></textarea>
         <button
-          onClick={changeSmile}
+          // Change smile state on Hover
+          onMouseEnter={() => setSmile(true)}
+          onMouseLeave={() => setSmile(false)}
+          type="submit"
+          value="Send"
+          onClick={() => setDone(true)}
           className="text-white group md:text-lg border-4 px-5 py-4 my-2 flex items-center justify-center hover:bg-pink-600 hover:font-bold hover:border-pink-900 duration-300 hover:scale-110 rounded-lg"
         >
           Let's Collaborate
           <span className="duration-300">
-            {!smile ? (
-              <BiSmile className="ml-3" size={35} />
-            ) : (
+            {smile ? (
               <BiWinkSmile className="ml-3" size={35} />
+            ) : (
+              <BiSmile className="ml-3" size={35} />
             )}
           </span>
         </button>
-        <input type="submit" />
+
         <span
           className={
-            !done ? 'text-white group md:text-lg border-4 px-5 py-4 my-2' : ' '
+            done
+              ? 'text-white group md:text-lg rounded-full flex justify-center  border-4 px-5 py-4 my-2 duration-300'
+              : ' '
           }
         >
-          {!done && 'Thanks for contacting me!'}
+          {done && setTimeout(() => setDone(false), 2000)}
+          {done
+            ? "Thank you for your message! I'll get back to you soon."
+            : ' '}
         </span>
       </form>
     </div>
