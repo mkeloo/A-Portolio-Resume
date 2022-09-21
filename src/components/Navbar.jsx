@@ -3,14 +3,15 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import NameGIF from '../assets/scrap.gif';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const links = [
-    { id: 1, url: '#', text: 'Home' },
-    { id: 2, url: '#', text: 'About' },
-    { id: 3, url: '#', text: 'Skills' },
-    { id: 4, url: '#', text: 'Work' },
-    { id: 5, url: '#', text: 'Contact' },
+    { id: 1, url: 'home', text: 'Home' },
+    { id: 2, url: 'about', text: 'About' },
+    { id: 3, url: 'skills', text: 'Skills' },
+    { id: 4, url: 'work', text: 'Work' },
+    { id: 5, url: 'contact', text: 'Contact' },
   ];
 
   const socials = [
@@ -65,7 +66,16 @@ const Navbar = () => {
               key={id}
               className="pb-3 link link-underline link-underline-black duration-500 hover:scale-110 hover:text-cyan-400"
             >
-              <a href={url}>{text}</a>
+              <Link
+                to={url}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                {text}
+              </Link>
             </li>
           );
         })}
@@ -92,7 +102,15 @@ const Navbar = () => {
               key={id}
               className="py-6 duration-500 hover:scale-105 hover:text-cyan-400 text-2xl link link-underline link-underline-black"
             >
-              <a href={url}>{text}</a>
+              <Link
+                to={url}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+              >
+                {text}
+              </Link>
             </li>
           );
         })}

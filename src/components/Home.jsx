@@ -4,7 +4,7 @@ import Typed from 'react-typed';
 
 const Home = () => {
   return (
-    <div name="Home" className="bg-[#0a192f] w-full h-screen z-4">
+    <div id="home" className="bg-[#0a192f] w-full h-screen z-4">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-500 text-xl">Hi, my name is</p>

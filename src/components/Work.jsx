@@ -1,10 +1,82 @@
 import React from 'react';
-import WorkImg from '../assets/workImg.jpeg';
-import realEstate from '../assets/realestate.jpg';
+import Bogo from '../assets/projects/Bogo.png';
+import Hoobr from '../assets/projects/Hoobr.png';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Light from '../assets/projects/Light.png';
+import Defi from '../assets/projects/Defi.png';
+import Dollartech from '../assets/projects/Dollartech.png';
+import Onn from '../assets/projects/Onn.png';
+import DataWarehouse from '../assets/projects/DataWarehouse.png';
 
 const Work = () => {
+  const workList = [
+    {
+      id: 1,
+      name: 'Bogo Eats',
+      img: Bogo,
+      sub: 'A food delivery app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://bogo-eats.netlify.app',
+      code: 'https://github.com/mkeloo/Bogo-Eats',
+    },
+    {
+      id: 2,
+      name: 'Hoober Bank',
+      img: Hoobr,
+      sub: 'A banking app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://payment-hoobnk.netlify.app',
+      code: 'https://github.com/mkeloo/Hoobank-Payment',
+    },
+    {
+      id: 3,
+      name: 'Light',
+      img: Light,
+      sub: 'A VR media app UI',
+      tech: 'React JS, Tailwind CSS, SCSS, CSS',
+      demo: 'https://vr-light.netlify.app',
+      code: 'https://github.com/mkeloo/VR-Light',
+    },
+    {
+      id: 4,
+      name: 'Defi',
+      img: Defi,
+      sub: 'A crypto app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://defi-crypto-labs.netlify.app/',
+      code: 'https://github.com/mkeloo/Defi',
+    },
+    {
+      id: 5,
+      name: 'Dollartech',
+      img: Dollartech,
+      sub: 'A Finance app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://growth-data.netlify.app',
+      code: 'https://github.com/mkeloo/Finance-Data',
+    },
+    {
+      id: 6,
+      name: 'Onn',
+      img: Onn,
+      sub: 'A Cloud Hosting app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://cloud-services-landing.netlify.app/',
+      code: 'https://github.com/mkeloo/Cloud-Web-Mockup-Website',
+    },
+    {
+      id: 7,
+      name: 'Data Warehouse',
+      img: DataWarehouse,
+      sub: 'A Data Storage Solution app UI',
+      tech: 'React JS, Tailwind CSS',
+      demo: 'https://data-warehouse-storage.netlify.app/',
+      code: 'https://github.com/mkeloo/Storage-Data',
+    },
+  ];
+
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div id="work" className="w-full md:h-full text-gray-300 bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
@@ -14,148 +86,36 @@ const Work = () => {
         </div>
 
         {/* Container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 ">
           {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
+
+          {workList.map(({ id, name, img, sub, tech, demo, code }) => (
+            <div
+              key={id}
+              className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-7 hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500"
+            >
+              <img
+                className="rounded-xl group-hover:opacity-10"
+                src={img}
+                alt="/"
+              />
+              <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+                <h3 className="text-2xl text-white text-center">{name}</h3>
+                <p className="text-lg text-gray-300">{sub}</p>
+                <p className="pb-4 pt-2 text-white text-center">{tech}</p>
+                <a href={demo} target="_blank" rel="noreferrer">
+                  <button className="text-center rounded-lg px-2 py-3 m-2 bg-white text-gray-700 font-bold text-lg  hover:rotate-6">
+                    Demo <FaExternalLinkAlt className="inline" />
                   </button>
                 </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
+                <a href={code} target="_blank" rel="noreferrer">
+                  <button className="text-center rounded-lg px-2 py-3 m-2 bg-white text-gray-700 font-bold text-lg  hover:rotate-6">
+                    Code <FaGithub className="inline" />
                   </button>
                 </a>
               </div>
             </div>
-          </div>
-          {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-          >
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                React JS Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="/">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
