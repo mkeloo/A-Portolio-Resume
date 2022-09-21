@@ -33,6 +33,14 @@
   ) !important;
 }
 
+.z-behind {
+  z-index: -50;
+}
+
+.z-front {
+  z-index: 99;
+}
+
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,

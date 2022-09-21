@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -41,14 +41,30 @@ const Navbar = () => {
     },
   ];
 
-  const [nav, setNav] = useState(false);
+  const [nav] = useState(true);
 
-  const toggleNav = () => {
-    setNav((prev) => !prev);
-  };
+  // navbar hide
+  const ref = useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (isMenuOpen && ref.current && !ref.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', checkIfClickedOutside);
 
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', checkIfClickedOutside);
+    };
+  }, [isMenuOpen]);
+
+  // main Component
   return (
-    <div className="fixed w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed sm:sticky w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
         <img
           src={NameGIF}
@@ -84,40 +100,43 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger Menu */}
-      <div onClick={toggleNav} className="md:hidden z-10">
-        {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
+      <div onClick={() => setIsMenuOpen(true)} className="md:hidden  z-[100]">
+        {isMenuOpen && nav ? <FaTimes size={28} /> : <FaBars size={28} />}
       </div>
 
       {/* Mobile Menu */}
       {/* Floating Navbar Design */}
       <div
-        className={`${
-          nav ? 'flex' : 'hidden'
-        } p-6 sm:hidden text-xl bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-[100] `}
+        className={`${nav ? 'flex' : 'hidden'} p-6 sm:hidden z-front text-xl ${
+          isMenuOpen && 'bg-black-gradient'
+        }  absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+        ref={ref}
       >
-        <ul className="list-non flex flex-col justify-end items-center flex-1">
-          {links.map(({ id, url, text }) => (
-            <Link
-              to={url}
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              <li
-                key={id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${
-                  id === links.length ? 'mr-0' : 'mb-4'
-                } text-white`}
+        {isMenuOpen && (
+          <ul className="list-non flex flex-col justify-end items-center flex-1 ">
+            {links.map(({ id, url, text }) => (
+              <Link
+                to={url}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
               >
-                <span className="link link-underline font-bold hover:text-cyan-500 pb-2 link-underline-black">
-                  <a href={url}>{text}</a>
-                </span>
-              </li>
-            </Link>
-          ))}
-        </ul>
+                <li
+                  key={id}
+                  className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                    id === links.length ? 'mr-0' : 'mb-4'
+                  } text-white`}
+                >
+                  <span className="link link-underline font-bold hover:text-cyan-500 pb-2 link-underline-black">
+                    <a href={url}>{text}</a>
+                  </span>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* Social icons */}

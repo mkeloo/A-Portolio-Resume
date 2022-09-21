@@ -87,35 +87,42 @@ const Work = () => {
         </div>
 
         {/* Container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 p-2">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 p-2  mb-4">
           {/* Grid Item */}
 
           {workList.map(({ id, name, img, sub, tech, demo, code }) => (
             <motion.div
               key={id}
-              className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-7 lg:hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500 "
+              className="sm:relative flex items-center justify-center h-full w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-1 lg:hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500  "
             >
               <img
-                className="rounded-xl group-hover:opacity-10"
+                className="rounded-xl group-hover:opacity-10 "
                 src={img}
                 alt="/"
               />
-              <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-                <h3 className="lg:text-2xl text-white text-center sm:font-bold text-xl">
+              <div className="hidden group-hover:block absolute md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] pb-4 pt-2 ">
+                <h3 className="lg:text-2xl text-white text-center sm:font-bold text-lg underline">
                   {name}
                 </h3>
                 <p className="lg:text-lg text-gray-300 text-md">{sub}</p>
-                <p className="pb-4 pt-2 text-white text-center text-md">
+                <p className="lg:pb-4 lg:pt-2  text-white text-center text-md">
                   {tech}
                 </p>
                 <a href={demo} target="_blank" rel="noreferrer">
-                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-2 bg-white text-gray-700 text-md font-bold lg:text-lg  hover:rotate-6">
-                    Demo <FaExternalLinkAlt className="inline" />
+                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-1 bg-white text-gray-700 text-md font-bold lg:text-lg  lg:hover:rotate-6">
+                    Demo
+                    {/* hide icon */}
+                    <span className="">
+                      <FaExternalLinkAlt className="inline ml-1" />
+                    </span>
                   </button>
                 </a>
                 <a href={code} target="_blank" rel="noreferrer">
-                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-2 bg-white text-gray-700 font-bold lg:text-lg text-md hover:rotate-6">
-                    Code <FaGithub className="inline" />
+                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-1 bg-white text-gray-700 font-bold lg:text-lg text-md lg:hover:rotate-6">
+                    Code
+                    <span className="">
+                      <FaGithub className="inline ml-1" />
+                    </span>
                   </button>
                 </a>
               </div>

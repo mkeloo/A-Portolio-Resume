@@ -85,7 +85,7 @@ const Skills = () => {
               className="shadow-md shadow-[#ff64ff] md:hover:scale-110 duration-500 rounded-2xl group hover:shadow-cyan-500 hover:shadow-xl "
             >
               <img
-                className="w-20 mx-auto lg:group-hover:skew-x-3 duration-500 lg:group-hover:rotate-6 lg:group-hover:skew-y-6 lg:group-hover:scale-110 sm:duration-300"
+                className="w-20 mx-auto lg:group-hover:skew-x-3 duration-500 lg:group-hover:rotate-6 lg:group-hover:skew-y-6 lg:group-hover:scale-110"
                 src={img}
                 alt={name}
               />
