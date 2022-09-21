@@ -43,7 +43,9 @@ const Navbar = () => {
 
   const [nav, setNav] = useState(false);
 
-  const toggleNav = () => setNav(!nav);
+  const toggleNav = () => {
+    setNav((prev) => !prev);
+  };
 
   return (
     <div className="fixed w-full h-[75px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
@@ -62,59 +64,61 @@ const Navbar = () => {
         {links.map((link) => {
           const { id, url, text } = link;
           return (
-            <li
-              key={id}
-              className="pb-3 link link-underline link-underline-black duration-500 hover:scale-110 hover:text-cyan-400"
+            <Link
+              to={url}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
             >
-              <Link
-                to={url}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
+              <li
+                key={id}
+                className="pb-3 link link-underline link-underline-black duration-500 hover:scale-110 hover:text-cyan-400"
               >
                 {text}
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         })}
       </ul>
 
       {/* Hamburger Menu */}
       <div onClick={toggleNav} className="md:hidden z-10">
-        {!nav ? <FaBars size={28} /> : <FaTimes size={28} />}
+        {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
       </div>
 
       {/* Mobile Menu */}
-      {/* Add Logo on top and socials in the bottom */}
-      <ul
-        className={
-          !nav
-            ? 'hidden'
-            : 'absolute top-0 left-0 w-[75%] z-100 shadow-pink-500 shadow-xl h-screen bg-[#0a192f] flex flex-col justify-center duration-500 ease-in-out items-center z-100'
-        }
+      {/* Floating Navbar Design */}
+      <div
+        className={`${
+          nav ? 'flex' : 'hidden'
+        } p-6 sm:hidden text-xl bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-[100] `}
       >
-        {links.map((link) => {
-          const { id, url, text } = link;
-          return (
-            <li
-              key={id}
-              className="py-6 duration-500 hover:scale-105 hover:text-cyan-400 text-2xl link link-underline link-underline-black"
+        <ul className="list-non flex flex-col justify-end items-center flex-1">
+          {links.map(({ id, url, text }) => (
+            <Link
+              to={url}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
             >
-              <Link
-                to={url}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
+              <li
+                key={id}
+                className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                  id === links.length ? 'mr-0' : 'mb-4'
+                } text-white`}
               >
-                {text}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                <span className="link link-underline font-bold hover:text-cyan-500 pb-2 link-underline-black">
+                  <a href={url}>{text}</a>
+                </span>
+              </li>
+            </Link>
+          ))}
+        </ul>
+      </div>
 
       {/* Social icons */}
       {/* Fixed Media Query for Medium devices */}

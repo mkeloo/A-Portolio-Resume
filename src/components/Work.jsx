@@ -7,6 +7,7 @@ import Defi from '../assets/projects/Defi.png';
 import Dollartech from '../assets/projects/Dollartech.png';
 import Onn from '../assets/projects/Onn.png';
 import DataWarehouse from '../assets/projects/DataWarehouse.png';
+import { motion } from 'framer-motion';
 
 const Work = () => {
   const workList = [
@@ -33,7 +34,7 @@ const Work = () => {
       name: 'Light',
       img: Light,
       sub: 'A VR media app UI',
-      tech: 'React JS, Tailwind CSS, SCSS, CSS',
+      tech: 'React JS, Tailwind, SCSS',
       demo: 'https://vr-light.netlify.app',
       code: 'https://github.com/mkeloo/VR-Light',
     },
@@ -68,7 +69,7 @@ const Work = () => {
       id: 7,
       name: 'Data Warehouse',
       img: DataWarehouse,
-      sub: 'A Data Storage Solution app UI',
+      sub: 'A Data Solution UI',
       tech: 'React JS, Tailwind CSS',
       demo: 'https://data-warehouse-storage.netlify.app/',
       code: 'https://github.com/mkeloo/Storage-Data',
@@ -86,13 +87,13 @@ const Work = () => {
         </div>
 
         {/* Container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 ">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 p-2">
           {/* Grid Item */}
 
           {workList.map(({ id, name, img, sub, tech, demo, code }) => (
-            <div
+            <motion.div
               key={id}
-              className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-7 hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500"
+              className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-7 lg:hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500 "
             >
               <img
                 className="rounded-xl group-hover:opacity-10"
@@ -100,21 +101,25 @@ const Work = () => {
                 alt="/"
               />
               <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-                <h3 className="text-2xl text-white text-center">{name}</h3>
-                <p className="text-lg text-gray-300">{sub}</p>
-                <p className="pb-4 pt-2 text-white text-center">{tech}</p>
+                <h3 className="lg:text-2xl text-white text-center sm:font-bold text-xl">
+                  {name}
+                </h3>
+                <p className="lg:text-lg text-gray-300 text-md">{sub}</p>
+                <p className="pb-4 pt-2 text-white text-center text-md">
+                  {tech}
+                </p>
                 <a href={demo} target="_blank" rel="noreferrer">
-                  <button className="text-center rounded-lg px-2 py-3 m-2 bg-white text-gray-700 font-bold text-lg  hover:rotate-6">
+                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-2 bg-white text-gray-700 text-md font-bold lg:text-lg  hover:rotate-6">
                     Demo <FaExternalLinkAlt className="inline" />
                   </button>
                 </a>
                 <a href={code} target="_blank" rel="noreferrer">
-                  <button className="text-center rounded-lg px-2 py-3 m-2 bg-white text-gray-700 font-bold text-lg  hover:rotate-6">
+                  <button className="text-center rounded-lg lg:px-2 lg:py-3 m-2 px-1 py-2 bg-white text-gray-700 font-bold lg:text-lg text-md hover:rotate-6">
                     Code <FaGithub className="inline" />
                   </button>
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
