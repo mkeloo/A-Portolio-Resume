@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-[#03045e] text-gray-400 py-8 px-2 border-t-2 border-pink-600">
       <div className="flex flex-col-2 items-center justify-center max-w-screen-xl mx-auto h-full px-3 py-12">
-        <div className="flex items-center pb-8 m-[-4]">
+        <div className="flex items-center justify-between pb-8 mr-7">
           <div className="ml-8 mr-8">
             <a
               href={'https://resume-mokshkeloo.netlify.app'}
