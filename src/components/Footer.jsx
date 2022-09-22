@@ -1,25 +1,12 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-// const Footer = () => {
-//   return (
-//     <div className="w-full h-[200px] text-gray-300 bg-[#0a192f]">
-//       <div className="w-full h-[5px] bg-pink-700" />
-//       <div>
-//         <h2>Footer</h2>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Footer;
-
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import '../index.css';
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#0F3460] text-gray-400 py-8 px-2 border-t-2 border-pink-600">
+    <div className="w-full bg-[#03045e] text-gray-400 py-8 px-2 border-t-2 border-pink-600">
       <div className="flex flex-col-2 items-center justify-center max-w-screen-xl mx-auto h-full px-3 py-12">
         <div className="flex items-center pb-8 m-[-4]">
           <div className="ml-8 mr-8">
@@ -60,7 +47,7 @@ const Footer = () => {
 
         <div className="w-3/4 md:w-1/2">
           <div className="grid grid-cols-2 mx-auto w-4/5 gap-10">
-            <div className="flex items-center justify-center rounded-md group shadow-md shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
+            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
@@ -72,7 +59,7 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div className="flex items-center justify-center rounded-md group shadow-md shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
+            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
               <a
                 href="https://www.twitter.com"
                 target="_blank"

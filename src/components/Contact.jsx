@@ -101,7 +101,7 @@ const Contact = () => {
               : ' '
           }
         >
-          {done ? 'Thank you for your message!' : ''}
+          {done ? 'Thank you for your message! ' : ''}
           {done && setTimeout(() => setDone(false), 5000)}
         </span>
       </form>

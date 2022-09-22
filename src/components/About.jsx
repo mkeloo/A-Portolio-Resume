@@ -10,7 +10,6 @@ const About = () => {
               About
             </p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-right text-4xl font-bold group">
@@ -21,22 +20,25 @@ const About = () => {
               </span>
               , nice to meet you. Please take a look around.
             </p>
-            {/* <p>
-              Hi. it's nice to meet you. I'm a third-year student at the
-              University of Florida studying Computer Science. Please take a
-              look around.
-            </p> */}
           </div>
           <div>
-            {/* Change About Section: Keep it concise and noticeable */}
-            {/* <img src={Blob} alt="blob" className="blur z-[-8]" /> */}
             <p className="text-xl">
-              I am passionate about building Front-End UI that improves the
-              lives of those around me. I specialize in creating web UI using
-              React, NextJS, and TailwindCSS. I am also experienced in building
-              RESTful APIs using NodeJS, Express, and MongoDB. Usually, for
-              clients ranging from individuals and small-businesses all the way
-              to large enterprise corporations.
+              I enjoy working on Front-End UI projects that can have a positive
+              impact on the lives of others. I specialize in creating web UI
+              using
+              <span className="text-cyan-500">
+                {' '}
+                React, NextJS, and TailwindCSS
+              </span>{' '}
+              . I am also experienced in building{' '}
+              <span className="text-emerald-500">RESTful APIs</span> using{' '}
+              <span className="text-emerald-500">
+                {' '}
+                NodeJS, Express, and MongoDB.
+              </span>{' '}
+              Currently, I'm a third-year student at the{' '}
+              <span className="text-orange-500"> University of Florida </span>
+              studying <span className="text-orange-500">Data Science.</span>
             </p>
           </div>
         </div>
