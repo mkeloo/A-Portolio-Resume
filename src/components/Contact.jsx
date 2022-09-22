@@ -70,7 +70,7 @@ const Contact = () => {
           placeholder="Name"
         />
         <input
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-delay="1100"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
@@ -80,9 +80,9 @@ const Contact = () => {
           placeholder="Email"
         />
         <textarea
-          data-aos="fade-down"
+          data-aos="fade-up"
           data-aos-duration="2000"
-          data-aos-delay="1200"
+          data-aos-delay="1100"
           className="bg-[#ccd6f6] border-2 rounded-lg p-3 flex border-gray-300 mb-4"
           name="message"
           rows="8"
@@ -90,9 +90,9 @@ const Contact = () => {
           placeholder="Message"
         ></textarea>
         <button
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="1300"
+          data-aos-delay="1100"
           // Change smile state on Hover
           onMouseEnter={() => setSmile(true)}
           onMouseLeave={() => setSmile(false)}

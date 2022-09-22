@@ -57,12 +57,7 @@ const Footer = () => {
 
         <div className="w-3/4 md:w-1/2 ">
           <div className="grid grid-cols-2 mx-auto w-4/5 gap-10">
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="2000"
-              data-aos-delay="1100"
-              className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500"
-            >
+            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
@@ -74,12 +69,7 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="2000"
-              data-aos-delay="1100"
-              className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500"
-            >
+            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
               <a
                 href="https://www.twitter.com"
                 target="_blank"
@@ -95,12 +85,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col items-center pb-8 mt-12">
-        <h1
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          data-aos-delay="1200"
-          className="text-xl sm:text-xl  mb-8 lg:text-2xl px-2 link link-underline link-underline-black "
-        >
+        <h1 className="text-xl sm:text-xl  mb-8 lg:text-2xl px-2 link link-underline link-underline-black ">
           <span className="font-serif font-semibold">Made by </span>
           <span className="font-extrabold ">Moksh Keloo</span>
         </h1>
