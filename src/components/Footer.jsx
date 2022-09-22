@@ -16,7 +16,7 @@ const Footer = () => {
               rel="noreferrer"
             >
               <button
-                data-aos="fade-right"
+                data-aos="fade-down"
                 data-aos-duration="2000"
                 data-aos-delay="1000"
                 className="text-white group md:text-lg border-4 px-6 md:px-10 py-4 my-2 flex items-center hover:bg-pink-600 hover:font-bold hover:border-pink-900 duration-300 hover:scale-110 rounded-lg"
@@ -38,7 +38,7 @@ const Footer = () => {
               offset={-80}
             >
               <button
-                data-aos="fade-left"
+                data-aos="fade-up"
                 data-aos-duration="2000"
                 data-aos-delay="1000"
                 className="text-white group md:text-lg border-4  md:px-14 px-8 py-4 my-2 flex items-center hover:bg-cyan-500 hover:font-bold hover:border-cyan-300 duration-300 hover:scale-110 rounded-lg"

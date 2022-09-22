@@ -60,7 +60,7 @@ const Contact = () => {
           </p>
         </div>
         <input
-          data-aos="fade-up-right"
+          data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-delay="1000"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
@@ -70,7 +70,7 @@ const Contact = () => {
           placeholder="Name"
         />
         <input
-          data-aos="fade-up-left"
+          data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-delay="1100"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
@@ -80,7 +80,7 @@ const Contact = () => {
           placeholder="Email"
         />
         <textarea
-          data-aos="fade-down-right"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-delay="1200"
           className="bg-[#ccd6f6] border-2 rounded-lg p-3 flex border-gray-300 mb-4"
@@ -90,7 +90,7 @@ const Contact = () => {
           placeholder="Message"
         ></textarea>
         <button
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-delay="1300"
           // Change smile state on Hover
