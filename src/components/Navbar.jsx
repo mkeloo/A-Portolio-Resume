@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      url: 'https://www.www.linkedin.com/in/mokshkeloo',
+      url: 'https://www.linkedin.com/in/mokshkeloo',
       icon: <FaLinkedin size={30} />,
       text: 'LinkedIn',
     },
