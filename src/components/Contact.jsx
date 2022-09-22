@@ -43,7 +43,12 @@ const Contact = () => {
         onSubmit={sendEmail}
         className="flex flex-col max-w-[600px] w-full"
       >
-        <div className="pb-7 group">
+        <div
+          className="pb-7 group"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-delay="900"
+        >
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
             Contact
           </p>
@@ -55,6 +60,9 @@ const Contact = () => {
           </p>
         </div>
         <input
+          data-aos="fade-up-right"
+          data-aos-duration="2000"
+          data-aos-delay="1000"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="text"
           name="user_name"
@@ -62,6 +70,9 @@ const Contact = () => {
           placeholder="Name"
         />
         <input
+          data-aos="fade-up-left"
+          data-aos-duration="2000"
+          data-aos-delay="1100"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="email"
           name="user_email"
@@ -69,6 +80,9 @@ const Contact = () => {
           placeholder="Email"
         />
         <textarea
+          data-aos="fade-down-right"
+          data-aos-duration="2000"
+          data-aos-delay="1200"
           className="bg-[#ccd6f6] border-2 rounded-lg p-3 flex border-gray-300 mb-4"
           name="message"
           rows="8"
@@ -76,6 +90,9 @@ const Contact = () => {
           placeholder="Message"
         ></textarea>
         <button
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-delay="1300"
           // Change smile state on Hover
           onMouseEnter={() => setSmile(true)}
           onMouseLeave={() => setSmile(false)}

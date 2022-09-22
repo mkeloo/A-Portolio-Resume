@@ -15,7 +15,12 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="text-white group md:text-lg border-4 px-6 md:px-10 py-4 my-2 flex items-center hover:bg-pink-600 hover:font-bold hover:border-pink-900 duration-300 hover:scale-110 rounded-lg">
+              <button
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                data-aos-delay="1000"
+                className="text-white group md:text-lg border-4 px-6 md:px-10 py-4 my-2 flex items-center hover:bg-pink-600 hover:font-bold hover:border-pink-900 duration-300 hover:scale-110 rounded-lg"
+              >
                 Resume
                 <span className="duration-300 group-hover:rotate-90">
                   {/* <HiArrowNarrowRight className="ml-3" size={30} /> */}
@@ -32,7 +37,12 @@ const Footer = () => {
               exact="true"
               offset={-80}
             >
-              <button className="text-white group md:text-lg border-4  md:px-14 px-8 py-4 my-2 flex items-center hover:bg-cyan-500 hover:font-bold hover:border-cyan-300 duration-300 hover:scale-110 rounded-lg">
+              <button
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                data-aos-delay="1000"
+                className="text-white group md:text-lg border-4  md:px-14 px-8 py-4 my-2 flex items-center hover:bg-cyan-500 hover:font-bold hover:border-cyan-300 duration-300 hover:scale-110 rounded-lg"
+              >
                 Home
                 <span className="duration-300 group-hover:rotate-90">
                   {/* <HiArrowNarrowRight className="ml-3" size={30} /> */}
@@ -45,9 +55,14 @@ const Footer = () => {
       <div className="flex flex-col gap-8 md:flex-row items-center justify-center w-full">
         {/* Social Icons */}
 
-        <div className="w-3/4 md:w-1/2">
+        <div className="w-3/4 md:w-1/2 ">
           <div className="grid grid-cols-2 mx-auto w-4/5 gap-10">
-            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="1100"
+              className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500"
+            >
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
@@ -59,7 +74,12 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="1100"
+              className="flex items-center justify-center rounded-md group shadow-xl shadow-pink-500 p-3 cursor-pointer hover:scale-110 duration-200 ease-in hover:shadow-cyan-500"
+            >
               <a
                 href="https://www.twitter.com"
                 target="_blank"
@@ -75,11 +95,21 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col items-center pb-8 mt-12">
-        <h1 className="text-xl sm:text-xl  mb-8 lg:text-2xl px-2 link link-underline link-underline-black ">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-delay="1200"
+          className="text-xl sm:text-xl  mb-8 lg:text-2xl px-2 link link-underline link-underline-black "
+        >
           <span className="font-serif font-semibold">Made by </span>
           <span className="font-extrabold ">Moksh Keloo</span>
         </h1>
-        <h1 className="text-4xl sm:text-6xl  lg:text-6xl px-2 link link-underline link-underline-black ">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-delay="1300"
+          className="text-4xl sm:text-6xl  lg:text-6xl px-2 link link-underline link-underline-black "
+        >
           <span className="font-serif font-semibold">The </span>
           <span className="font-extrabold ">End</span>
         </h1>

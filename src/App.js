@@ -5,9 +5,20 @@ import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import Work from './components/Work';
 import Footer from './components/Footer';
-import React from 'react';
+import React, { useEffect } from 'react';
+
+// import aos (animate on scroll)
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  // aos initialization
+  useEffect(() => {
+    Aos.init({
+      duration: 2500,
+      delay: 400,
+    });
+  });
   return (
     <div className="bg-blue-400">
       <Navbar />

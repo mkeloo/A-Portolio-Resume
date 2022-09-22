@@ -7,7 +7,6 @@ import Defi from '../assets/projects/Defi.png';
 import Dollartech from '../assets/projects/Dollartech.png';
 import Onn from '../assets/projects/Onn.png';
 import DataWarehouse from '../assets/projects/DataWarehouse.png';
-import { motion } from 'framer-motion';
 
 const Work = () => {
   const workList = [
@@ -79,7 +78,12 @@ const Work = () => {
   return (
     <div id="work" className="w-full md:h-full text-gray-300 bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-delay="900"
+          className="pb-8"
+        >
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
           </p>
@@ -91,7 +95,10 @@ const Work = () => {
           {/* Grid Item */}
 
           {workList.map(({ id, name, img, sub, tech, demo, code }) => (
-            <motion.div
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="1000"
               key={id}
               className="sm:relative flex items-center justify-center h-full w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-1 lg:hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500  "
             >
@@ -126,7 +133,7 @@ const Work = () => {
                   </button>
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -5,14 +5,24 @@ const About = () => {
     <div id="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         <div className="max-w-[1000px] w-full  grid grid-cols-2 gap-8">
-          <div className="sm:text-right  pb-8 pl-4">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            data-aos-delay="700"
+            className="sm:text-right  pb-8 pl-4"
+          >
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
               About
             </p>
           </div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold group">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            data-aos-delay="900"
+            className="sm:text-right text-4xl font-bold group"
+          >
             <p>
               Hi. I'm{' '}
               <span className="link link-underline link-underline-black duration-300 group-hover:text-cyan-400">
@@ -21,7 +31,11 @@ const About = () => {
               , nice to meet you. Please take a look around.
             </p>
           </div>
-          <div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            data-aos-delay="1000"
+          >
             <p className="md:text-xl text-lg">
               I enjoy working on Front-End UI projects that can have a positive
               impact on the lives of others. I specialize in creating web UI
