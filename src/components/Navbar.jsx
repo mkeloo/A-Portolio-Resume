@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      url: 'https://www.linkedin.com',
+      url: 'https://www.www.linkedin.com/in/mokshkeloo',
       icon: <FaLinkedin size={30} />,
       text: 'LinkedIn',
     },
@@ -35,8 +35,8 @@ const Navbar = () => {
     },
     {
       id: 4,
-      url: 'https://www.instagram.com',
-      icon: <BsFillPersonLinesFill size={30} Download />,
+      url: 'https://resume-mokshkeloo.netlify.app',
+      icon: <BsFillPersonLinesFill size={30} />,
       text: 'Resume',
     },
   ];
