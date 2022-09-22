@@ -5,14 +5,36 @@ import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import ReactImg from '../assets/react.png';
 import Node from '../assets/node.png';
-import FireBase from '../assets/firebase.png';
-import AWS from '../assets/aws.png';
+
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Mongo from '../assets/mongo.png';
+import Bootstrap from '../assets/Bootstrap.png';
+import Django from '../assets/django.png';
+import Python from '../assets/python.jpg';
+import CPP from '../assets/cpp.svg';
+import Java from '../assets/Java.png';
+import JQuery from '../assets/jquery.png';
+import sql from '../assets/sql.png';
+import Typescript from '../assets/Typescript.png';
 
 const Skills = () => {
   const skills = [
+    {
+      id: 13,
+      name: 'Python',
+      img: Python,
+    },
+    {
+      id: 14,
+      name: 'Java',
+      img: Java,
+    },
+    {
+      id: 6,
+      name: 'C++',
+      img: CPP,
+    },
     {
       id: 1,
       name: 'HTML',
@@ -29,29 +51,14 @@ const Skills = () => {
       img: JavaScript,
     },
     {
+      id: 7,
+      name: 'TypeScript',
+      img: Typescript,
+    },
+    {
       id: 4,
       name: 'React',
       img: ReactImg,
-    },
-    {
-      id: 5,
-      name: 'Node',
-      img: Node,
-    },
-    {
-      id: 6,
-      name: 'FireBase',
-      img: FireBase,
-    },
-    {
-      id: 7,
-      name: 'AWS',
-      img: AWS,
-    },
-    {
-      id: 8,
-      name: 'GitHub',
-      img: GitHub,
     },
     {
       id: 9,
@@ -59,9 +66,39 @@ const Skills = () => {
       img: Tailwind,
     },
     {
+      id: 11,
+      name: 'Bootstrap',
+      img: Bootstrap,
+    },
+    {
+      id: 15,
+      name: 'JQuery',
+      img: JQuery,
+    },
+    {
+      id: 5,
+      name: 'Node',
+      img: Node,
+    },
+    {
       id: 10,
       name: 'MongoDB',
       img: Mongo,
+    },
+    {
+      id: 8,
+      name: 'GitHub',
+      img: GitHub,
+    },
+    {
+      id: 12,
+      name: 'Django',
+      img: Django,
+    },
+    {
+      id: 16,
+      name: 'SQL',
+      img: sql,
     },
   ];
 

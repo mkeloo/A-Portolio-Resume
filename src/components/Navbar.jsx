@@ -86,7 +86,7 @@ const Navbar = () => {
               duration={500}
               spy={true}
               exact="true"
-              offset={-80}
+              offset={-90}
             >
               <li
                 key={id}
