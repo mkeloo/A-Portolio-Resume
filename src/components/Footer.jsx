@@ -104,12 +104,7 @@ const Footer = () => {
           <span className="font-serif font-semibold">Made by </span>
           <span className="font-extrabold ">Moksh Keloo</span>
         </h1>
-        <h1
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          data-aos-delay="1300"
-          className="text-4xl sm:text-6xl  lg:text-6xl px-2 link link-underline link-underline-black "
-        >
+        <h1 className="text-4xl sm:text-6xl  lg:text-6xl px-2 link link-underline link-underline-black ">
           <span className="font-serif font-semibold">The </span>
           <span className="font-extrabold ">End</span>
         </h1>
