@@ -68,6 +68,7 @@ const Contact = () => {
           name="user_name"
           value={value}
           placeholder="Name"
+          // Testing
         />
         <input
           data-aos="fade-down"
