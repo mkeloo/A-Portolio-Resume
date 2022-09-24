@@ -8,7 +8,7 @@ const About = () => {
           <div
             data-aos="fade-down"
             data-aos-duration="2000"
-            data-aos-delay="700"
+            data-aos-delay="600"
             className="sm:text-right  pb-8 m-4 mt-[-8] pl-4"
           >
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
@@ -20,7 +20,7 @@ const About = () => {
           <div
             data-aos="fade-down"
             data-aos-duration="2000"
-            data-aos-delay="900"
+            data-aos-delay="600"
             className="sm:text-right text-4xl font-bold group"
           >
             <p>
@@ -31,11 +31,7 @@ const About = () => {
               , nice to meet you. Please take a look around.
             </p>
           </div>
-          <div
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-            data-aos-delay="1000"
-          >
+          <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600">
             <p className="md:text-xl text-lg">
               I enjoy working on Front-End UI projects that can have a positive
               impact on the lives of others. I specialize in creating web UI

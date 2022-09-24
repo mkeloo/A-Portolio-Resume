@@ -109,7 +109,7 @@ const Skills = () => {
     >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="900">
+        <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="600">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 duration-300 hover:text-cyan-400">
             Skills
           </p>
@@ -121,7 +121,7 @@ const Skills = () => {
         <div
           data-aos="zoom-in"
           data-aos-duration="2000"
-          data-aos-delay="900"
+          data-aos-delay="600"
           className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8"
         >
           {skills.map(({ id, name, img }) => (

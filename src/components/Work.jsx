@@ -81,7 +81,7 @@ const Work = () => {
         <div
           data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="900"
+          data-aos-delay="600"
           className="pb-8"
         >
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
@@ -98,7 +98,7 @@ const Work = () => {
             <div
               data-aos="zoom-in"
               data-aos-duration="2000"
-              data-aos-delay="1000"
+              data-aos-delay="600"
               key={id}
               className="sm:relative flex items-center justify-center h-full w-full shadow-xl shadow-pink-500 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] mb-1 lg:hover:scale-105 transition duration-300 ease-in-out hover:shadow-cyan-500  "
             >

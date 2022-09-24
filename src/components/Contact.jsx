@@ -47,7 +47,7 @@ const Contact = () => {
           className="pb-7 group"
           data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="900"
+          data-aos-delay="600"
         >
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
             Contact
@@ -62,7 +62,7 @@ const Contact = () => {
         <input
           data-aos="fade-up"
           data-aos-duration="2000"
-          data-aos-delay="1000"
+          data-aos-delay="600"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="text"
           name="user_name"
@@ -74,7 +74,7 @@ const Contact = () => {
         <input
           data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="1100"
+          data-aos-delay="600"
           className="border-2 rounded-lg p-3 flex bg-[#ccd6f6]  mb-4"
           type="email"
           name="user_email"
@@ -84,7 +84,7 @@ const Contact = () => {
         <textarea
           data-aos="fade-up"
           data-aos-duration="2000"
-          data-aos-delay="1100"
+          data-aos-delay="600"
           className="bg-[#ccd6f6] border-2 rounded-lg p-3 flex border-gray-300 mb-4"
           name="message"
           rows="8"
