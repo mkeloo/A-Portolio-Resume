@@ -5,6 +5,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import '../index.css';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="w-full bg-[#03045e] text-gray-400 py-8 px-2 border-t-2 border-pink-600">
       <div className="flex flex-col-2 items-center justify-center max-w-screen-xl mx-auto h-full px-3 py-12">
@@ -85,7 +86,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col items-center pb-8 mt-12">
-        <h1 className="text-xl sm:text-xl  mb-8 lg:text-2xl px-2 link link-underline link-underline-black ">
+        <h1 className="text-xl sm:text-xl mt-0 md:mt-8 mb-8 lg:text-2xl px-2 link link-underline link-underline-black ">
           <span className="font-serif font-semibold">Made by </span>
           <span className="font-extrabold ">Moksh Keloo</span>
         </h1>
@@ -93,6 +94,11 @@ const Footer = () => {
           <span className="font-serif font-semibold">The </span>
           <span className="font-extrabold ">End</span>
         </h1>
+      </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <p className="text-lg  mb-2 px-2 ">Copyright © {year} Moksh Keloo.</p>
+        <p className="text-lg  mb-8 px-2 ">All rights reserved.</p>
       </div>
     </div>
   );
