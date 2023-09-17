@@ -46,7 +46,7 @@ const About = () => {
                 {' '}
                 NodeJS, Express, and MongoDB.
               </span>{' '}
-              Currently, I'm a third-year student at the{' '}
+              Currently, I'm a senior at the{' '}
               <span className="text-orange-500"> University of Florida </span>
               studying <span className="text-orange-500">Computer Science.</span>
             </p>
