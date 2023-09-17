@@ -21,7 +21,7 @@ const Home = () => {
           I'm a {/* Front-End Developer.*/}{' '}
           <Typed
             className=""
-            strings={['Junior Front-End', 'Data Analyst']}
+            strings={['Junior Front-End']}
             typeSpeed={120}
             backSpeed={140}
             loop
